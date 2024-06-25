@@ -25,3 +25,11 @@ jobs:
         continue-on-error: true
       - name: checking error
         run: echo testing after error execution
+      - name: install docker package
+        uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      - name: create docker image of the python
+        run: |
+          set -x
+          docker version
+          docker build -t vimpyimg .
