@@ -1,4 +1,4 @@
-#! /usr/sbin/python3
+#! /usr/bin/python3
 import math
 
 def test_sqrt():
