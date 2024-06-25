@@ -32,12 +32,12 @@ jobs:
         run: |
           set -x
           docker version
-          docker build -t vimpyimg .
+          docker build -t vimalantonyraj/vimpyimg .
       - name: docker login
         uses: docker/login-action@v3
         with:
-          username: vimalantonyraj@gmail.com
-          password: Vimal@123
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.USER_PASSWD }}
       - name: docker push
         run: |
-          docker push vimpyimg
+          docker push vimalantonyraj/vimpyimg
