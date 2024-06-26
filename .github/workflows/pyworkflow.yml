@@ -10,7 +10,7 @@ on:
 
 jobs:
   pybuildjob1:
-    runs-on: ubuntu-latest
+    runs-on: vimtest
     steps:
       - name: pybuildstep1
         uses: actions/checkout@v4
